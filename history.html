@@ -1,0 +1,505 @@
+<html>
+<head>
+<title>History</title>
+<link rel="stylesheet" href="quizzard_style.css">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+                <!-- Google Fonts -->
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+                <!-- Bootstrap core CSS -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+                <!-- Material Design Bootstrap -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+                <!-- JQuery -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <!-- Bootstrap tooltips -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+                <!-- Bootstrap core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                <!-- MDB core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+</head>
+<style>
+.bg{
+ background-image: url(" https://denison.edu/sites/default/files/sections/pride-point/history.jpg");
+ background-position: center;
+ background-repeat: repeat;
+ background-size: 100%;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+.quiz
+{
+background:rgba(242, 241, 225,0.95);
+color:black;
+width: 80%;
+font-size: 17px;
+border-radius: 25px;
+padding:20px;
+}
+
+.quiz1
+{
+background:rgba(242, 241, 225,0.95);
+color:white;
+width: 80%;
+height:30%;
+font-size: 15px;
+border-radius: 25px;
+padding:20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 70%;
+    height: 1.1em;
+}
+
+h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#e61920,#e3842b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+</style>
+
+<script>
+var score=0;
+function calculate()
+{
+
+	if (document.getElementById("1a").checked) score+=1;
+	if (document.getElementById("2b").checked) score+=1;
+	if (document.getElementById("3a").checked) score+=1;
+	if (document.getElementById("4b").checked) score+=1;
+	if (document.getElementById("5b").checked) score+=1;
+	if (document.getElementById("6b").checked) score+=1;
+	if (document.getElementById("7a").checked) score+=1;
+	if (document.getElementById("8b").checked) score+=1;
+	if (document.getElementById("9c").checked) score+=1;
+	if (document.getElementById("10b").checked) score+=1;
+	if (score==10)document.getElementById("score").innerHTML="Great, You are all set to attend the UPSC exam. Congrats in advance :)";
+	if (score>=6 && score<=9) document.getElementById("score").innerHTML="Great! Your final score is "+score;
+	if (score>=0 && score<=5) document.getElementById("score").innerHTML="It's okay! Your final score is "+score;
+
+	document.getElementById("dull").style.visibility="visible";
+	document.getElementById("pop").style.visibility="visible";
+
+}
+function close_pop()
+{
+	document.getElementById("pop").style.visibility="hidden";
+	document.getElementById("dull").style.visibility="hidden";
+}
+</script>
+
+
+<body >
+
+<main>
+<section class="py-5 bg">
+
+<div class="background_dull" id ="dull" style="visibility:hidden">
+</div>
+
+<div class="score_pop" id="pop" style="visibility:hidden">
+<p id="score"></p>
+<center>
+<button class="button" onclick="close_pop()">Close</button>
+<a href="history_key.html"><button class="button">Click here to go to the answer key</button></a>
+</center>
+</div>
+
+
+<div class="container quiz1">
+<h2 class="h1-responsive font-weight-bold text-center mb-5" >History Quiz</h2>
+<h3 class="text-dark text-center mx-auto mb-5">Ready to travel through time?</h3>
+</div>
+<br>
+<br>
+<div class="container quiz">
+<p>Q1. What Was the Largest Contiguous Empire in History?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his1" id="1a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Genghis Khan</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his1" id="1b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Ashoka</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his1" id="1c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Alexander</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his1" id="1d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Cherar Chozhar Pandiyar Pallavar</p>
+	</div>
+</div>
+</div>
+<br>
+<div class="container quiz">
+<p>Q2. Who Invented the Automobile?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his2" id="2a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Henry Ford</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his2" id="2b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Nicolas-Joseph</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his2" id="2c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Nicola Tesla</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his2" id="2d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Mohan Lal</p>
+	</div>
+</div>
+</div>
+
+
+<br>
+<div class="container quiz">
+<p>Q3. Which one of the following archaeologists iniially discovered the mohenjodaro site of the indus valley civilisation</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his3" id="3a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Sir John Marshall</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his3" id="3b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Rakhal Das Bannerji</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his3" id="3c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Daya Ram Shani</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his3" id="3d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Sir Martimer Wheeler</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q4. The First Budhist Counsil was held in the reign of ? </p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his4" id="4a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Bimbisara</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his4" id="4b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Ajatshatru</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his4" id="4c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Ashoka</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his4" id="4d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Kanishka</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q5. Tenaliraman belongs to the kingdom of?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his5" id="5a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Dholakpur</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his5" id="5b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Vijaya Nagar</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his5" id="5c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Mahizh Mathi</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his5" id="5d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Pulikasi</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q6.The first foreigner to invade in india was</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his6" id="6a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Cyrus</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his6" id="6b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Darius I</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his6" id="6c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Shane Watson</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his6" id="6d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Andrew Tye</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q7. The only ruler of India who ruled over territories in central Asia beyond the pamirs was</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his7" id="7a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Kanishk</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his7" id="7b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Ashoka</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his7" id="7c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Samutrakani</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his7" id="7d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Harsha</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q8. Panchathantra was written by?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his8" id="8a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Kalidasa</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his8" id="8b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Vishnu Sharma</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his8" id="8c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Tulsi Das</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his8" id="8d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Bhanabatta</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q9. Saka Era was founded by?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his9" id="9a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Ashoka</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his9" id="9b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Harsha</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his9" id="9c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p> Kanishka</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his9" id="9d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Vikramadithan</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q10.	Mahatma was added before Gandhiji's name during?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his10" id="10a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Dhoni's World cup Last ball six</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his10" id="10b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Champarana Sathyagraha</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his10" id="10c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Rowlatt Sathyagraha</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="his10" id="10d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Initial stages of Khalifat Movement</p>
+	</div>
+</div>
+</div>
+
+<br><br>
+
+<table border=0 align=center>
+<tr>
+<td colspan=2 align=center><button class="button" onclick="calculate()">Okay let's check my score!</button></td>
+</tr>
+</table>
+
+</div>
+</section>
+</main>
+</body>
+</html>

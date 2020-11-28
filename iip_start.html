@@ -1,0 +1,92 @@
+<html>
+<head>
+<title></title>
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+                <!-- Google Fonts -->
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+                <!-- Bootstrap core CSS -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+                <!-- Material Design Bootstrap -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+                <!-- JQuery -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <!-- Bootstrap tooltips -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+                <!-- Bootstrap core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                <!-- MDB core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+</head>
+<style>
+.bg{
+background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/question-mark-icon-on-white-puzzle-royalty-free-image-917901148-1558452934.jpg?crop=1.00xw:0.752xh;0,0.137xh&resize=1200:*");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.content {
+  position: relative;
+  top: 150px;
+  left: 180px;
+  bottom: 0;
+  background: rgba(0,0, 0, 0.80);
+  color: #f1f1f1;
+  width: 70%;
+  height: 50%;
+  padding: 20px;
+}
+.myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  color:black;
+  cursor: pointer;
+}
+
+.myBtn:hover {
+  background: #15c9ed;
+  color: black;}
+</style>
+<body class="bg">
+<div class="container">
+<div class="content text-center">
+  <h1>Welcome to the topic Page!</h1>
+  <p>Click on the topic you desire to take the quiz!</p>
+  <button class="myBtn" onclick="pageRedirect1()">Physics</button>
+  <button class="myBtn" onclick="pageRedirect2()">History</button>
+  <button class="myBtn" onclick="pageRedirect3()">First aid</button>
+<br>
+<br>
+  <button class="myBtn" onclick="pageRedirect4()">Sports</button>
+  <button class="myBtn" onclick="pageRedirect5()">Entertainment</button>
+</div>
+</div>
+
+<script>
+    function pageRedirect1() 
+	{
+      		window.location.href = "topic_physics.html";
+    	} 
+    function pageRedirect2() 
+	{
+      		window.location.href = "history.html";
+    	}  
+    function pageRedirect3() 
+	{
+      		window.location.href = "topic_first aid.html";
+    	}  
+    function pageRedirect4() 
+	{
+      		window.location.href = "sportsgk.html";
+    	}  
+    function pageRedirect5() 
+	{
+      		window.location.href = "entertainment.html";
+    	}       
+</script> 
+
+</body>
+</html>

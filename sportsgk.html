@@ -1,0 +1,504 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="quizzard_style.css">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+                <!-- Google Fonts -->
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+                <!-- Bootstrap core CSS -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+                <!-- Material Design Bootstrap -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+                <!-- JQuery -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <!-- Bootstrap tooltips -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+                <!-- Bootstrap core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                <!-- MDB core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+</head>
+<style>
+.bg{
+ background-image: url("https://previews.123rf.com/images/krekdm/krekdm1607/krekdm160700287/61897882-seamless-sport-pattern-can-be-used-for-wallpaper-website-background-wrapping-paper-sport-equipment-b.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+* {
+  box-sizing: border-box;
+}
+.quiz
+{
+background: rgba(0, 0, 0, 0.80);
+color:white;
+width: 80%;
+font-size: 17px;
+border-radius: 25px;
+padding:20px;
+}
+
+.quiz1
+{
+background: rgba(0, 0, 0, 0.80);
+color:white;
+width: 80%;
+height:40%;
+font-size: 15px;
+border-radius: 25px;
+padding:20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 70%;
+    height: 1.1em;
+}
+
+h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#e61920,#e3842b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+</style>
+
+<script>
+var score=0;
+function calculate()
+{
+
+	if (document.getElementById("1b").checked) score+=1;
+	if (document.getElementById("2c").checked) score+=1;
+	if (document.getElementById("3a").checked) score+=1;
+	if (document.getElementById("4d").checked) score+=1;
+	if (document.getElementById("5c").checked) score+=1;
+	if (document.getElementById("6c").checked) score+=1;
+	if (document.getElementById("7b").checked) score+=1;
+	if (document.getElementById("8b").checked) score+=1;
+	if (document.getElementById("9d").checked) score+=1;
+	if (document.getElementById("10b").checked) score+=1;
+	if (score==10)document.getElementById("score").innerHTML="DO U BREATHE SPORTS???! You scored full marks!"; 
+	if (score>=6 && score<=9) document.getElementById("score").innerHTML="Amazing! Your final score is "+score;
+	if (score>=0 && score<=5) document.getElementById("score").innerHTML="It's okay! Your final score is "+score;
+
+	document.getElementById("dull").style.visibility="visible";
+	document.getElementById("pop").style.visibility="visible";
+	
+}
+function close_pop()
+{
+	document.getElementById("pop").style.visibility="hidden";
+	document.getElementById("dull").style.visibility="hidden";
+}
+</script>
+
+
+<body>
+
+<main>
+<section class="py-5 bg">
+
+<div class="background_dull" id ="dull" style="visibility:hidden">
+</div>
+
+<div class="score_pop" id="pop" style="visibility:hidden">
+<p id="score"></p>
+<center>
+<button class="button" onclick="close_pop()">Close</button>
+<a href="topic_sports_key.html"><button class="button">Click here to go to the answer key</button></a>
+</center>
+</div>
+
+
+<div class="container quiz1">
+<h2 class="h1-responsive font-weight-bold text-center mb-5" >LETS GO SPORTY</h2>
+<h3 class="text-white text-center mx-auto mb-5">Lets test your sports knowledge with some cheeky questions</h3>
+</div>
+<br>
+<br>
+<div class="container quiz">
+<p>Q1. Which mode of dismissal in cricket sounds similar to an Indian actress name ?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp1" id="1a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Bowled</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp1" id="1b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Run out</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp1" id="1c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Stumped</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp1" id="1d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Catch</p>
+	</div>
+</div>
+</div>
+<br>
+<div class="container quiz">
+<p>Q2. What do you think would be the national sport of India?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp2" id="2a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Obviously cricket</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp2" id="2b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Kabbadi</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp2" id="2c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Hockey </p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp2" id="2d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Football</p>
+	</div>
+</div>
+</div>
+
+
+<br>
+<div class="container quiz">
+<p>Q3. What is Usian Bolt's 100 metre sprint time?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp3" id="3a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>9.58 sec</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp3" id="3b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>1 min</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp3" id="3c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>25 sec</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp3" id="3d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>12 sec</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q4.Which F1 racer's name is same to a place in the United Kingdom?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp4" id="4a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Valtteri</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp4" id="4b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Ancelotti</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp4" id="4c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Buckingham</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp4" id="4d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Hamilton</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q5. How much do you know your futbol....Which team won the first premier league title?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp5" id="5a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Liverpool</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp5" id="5b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Wolves</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp5" id="5c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Manchester with a red</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp5" id="5d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Manchester with a blue</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q6. 	Who is the man behind the world famous league the IPL.This man has the same surname as the prime minister of India.Guess the first name?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp6" id="6a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Shashank</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp6" id="6b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Narendra</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp6" id="6c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Lalit</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp6" id="6d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Well none of the above</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q7. What is the most ancient sport played all across the globe?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp7" id="7a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Snooker</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp7" id="7b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Wrestling</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp7" id="7c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>It is gonna be the sport which muhammad ali played</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp7" id="7d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Table tennis</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q8. What is jallikattu the sport of?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp8" id="8a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Eating samosas</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp8" id="8b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Hugging bulls</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp8" id="8c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Breaking logs of wood</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp8" id="8d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Fighting the rampaging bulls</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q9. 	When did India win their first world cup in football?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp9" id="9a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Is there a football team for India?</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp9" id="9b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>1983</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp9" id="9c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>2011</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp9" id="9d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Never</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q10.	Who is considered as the God of cricket?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp10" id="10a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Don bradman</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp10" id="10b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Ms dhoni</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp10" id="10c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Sachin tendulkar</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="sp10" id="10d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Robert Boyle</p>
+	</div>
+</div>
+</div>
+
+<br><br>
+
+<table border=0 align=center>
+<tr>
+<td colspan=2 align=center><button class="button" onclick="calculate()">Okay let's check my score!</button></td>
+</tr>
+</table>
+
+</div>
+</section>
+</main>
+</body>
+</html>

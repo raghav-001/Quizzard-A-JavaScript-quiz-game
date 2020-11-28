@@ -1,0 +1,505 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="quizzard_style.css">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+                <!-- Google Fonts -->
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+                <!-- Bootstrap core CSS -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+                <!-- Material Design Bootstrap -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+                <!-- JQuery -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <!-- Bootstrap tooltips -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+                <!-- Bootstrap core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                <!-- MDB core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+</head>
+<style>
+.bg{
+  background-image: url("https://previews.123rf.com/images/valeriyador/valeriyador1806/valeriyador180600427/103385079-hand-drawn-medicine-pattern-health-care-pharmacy-doodle-seamless-background-vector-doodle-illustrati.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+}
+* {
+  box-sizing: border-box;
+}
+.quiz
+{
+background: linear-gradient(to right, rgba(164, 35, 43, 0.91), rgba(35, 136, 164, 0.91));
+color:white;
+width: 80%;
+font-size: 17px;
+border-radius: 25px;
+padding:20px;
+}
+
+.quiz1
+{
+background: linear-gradient(to right, rgba(164, 35, 43, 0.91), rgba(35, 136, 164, 0.91));
+color:white;
+width: 80%;
+height:40%;
+font-size: 15px;
+border-radius: 25px;
+padding:20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 70%;
+    height: 1.1em;
+}
+
+h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#e3842b,#e61920);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+</style>
+
+<script>
+var score=0;
+function calculate()
+{
+
+	if (document.getElementById("1a").checked) score+=1;
+	if (document.getElementById("2c").checked) score+=1;
+	if (document.getElementById("3b").checked) score+=1;
+	if (document.getElementById("4c").checked) score+=1;
+	if (document.getElementById("5a").checked) score+=1;
+	if (document.getElementById("6d").checked) score+=1;
+	if (document.getElementById("7a").checked) score+=1;
+	if (document.getElementById("8c").checked) score+=1;
+	if (document.getElementById("9a").checked) score+=1;
+	if (document.getElementById("10a").checked) score+=1;
+	if (score==10)document.getElementById("score").innerHTML="You scored full marks! It's a good thing to help people!";
+	if (score>=6 && score<=9) document.getElementById("score").innerHTML="Great! Your final score is "+score;
+	if (score>=0 && score<=5) document.getElementById("score").innerHTML="It's okay! Your final score is "+score;
+
+	document.getElementById("dull").style.visibility="visible";
+	document.getElementById("pop").style.visibility="visible";
+
+}
+function close_pop()
+{
+	document.getElementById("pop").style.visibility="hidden";
+	document.getElementById("dull").style.visibility="hidden";
+}
+</script>
+
+
+<body>
+
+<main>
+<section class="py-5 bg">
+
+<div class="background_dull" id ="dull" style="visibility:hidden">
+</div>
+
+<div class="score_pop" id="pop" style="visibility:hidden">
+<p id="score"></p>
+<center>
+<button class="button" onclick="close_pop()">Close</button>
+<a href="topic_first aid_key.html"><button class="button">Click here to go to the answer key</button></a>
+</center>
+</div>
+
+
+<div class="container quiz1">
+<h2 class="h1-responsive font-weight-bold text-center mb-5" >First Aid Quiz</h2>
+<h3 class="text-white text-center mx-auto mb-5">Easiest way to become a superhero :p</h3>
+</div>
+<br>
+<br>
+<div class="container quiz">
+<p>Q1. Okay a tricky one to start off with, What steps would you take to control bleeding from a nosebleed ?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa1`" id="1a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Sit casualty down, lean forward and pinch soft part of nose.
+</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa1" id="1b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Sit casualty down, lean backward and pinch soft part of nose.</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa1" id="1c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Lie casualty down and pinch soft part of nose</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa1" id="1d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Lie casualty down and pinch top of nose.</p>
+	</div>
+</div>
+</div>
+<br>
+<div class="container quiz">
+<p>Q2. Easy one, how do you take care of an insect bite or sting that causes a mild reaction?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa2" id="2a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Insects do me no harm, so I'mma leave it as is</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa2" id="2b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Wash with soap for extra precaution?</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa2" id="2c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Wash with soap and cold compress for a few seconds, calamine if necessary</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa2" id="2d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Directly apply calamine on the area</p>
+	</div>
+</div>
+</div>
+
+
+<br>
+<div class="container quiz">
+<p>Q3. When should one perform CPR-Cardiopulmonary Resuscitation?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa3" id="3a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The casuality is unconscious but has pulse</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa3" id="3b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The casuality is not breathing/not breathing normally</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa3" id="3c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The casuality shows signs of movement</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa3" id="3d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Wait for the ambulance to arrive</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q4. When does a burn wound need emergency attention?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa4" id="4a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The burn affected the outer layer of the skin</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa4" id="4b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The burnt area is less than 2-3 inches wide</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa4" id="4c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Partial thickness burns on the hands/feet/face/genitals</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa4" id="4d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The burnt area is red and stinging</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q5. How long would you check to see if an unconscious casualty is breathing normally?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa5" id="5a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	No more than 10 seconds.</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa5" id="5b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Approximately 10 seconds.</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa5" id="5c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Exactly 10 seconds.</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa5" id="5d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>At least 10 seconds.</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q6. 	How should you open the airway of an unconscious casualty?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa6" id="6a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Lift the chin.</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa6" id="6b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Jaw thrust.</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa6" id="6c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Head tilt and jaw thrust.</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa6" id="6d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Head tilt and chin lift</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q7. RICE- Rest Ice Compress Elevate is used to treat what kind of wound ?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa7" id="7a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Contused wounds</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa7" id="7b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Lacerated wounds</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa7" id="7c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Incised wounds</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa7" id="7d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Punctured wounds</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q8. Let's see how well you can answer the chain of survival. Choose the right order from the options given.</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa8" id="8a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Early access, early defibrillation, early CPR, early advanced life support</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa8" id="8b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Early CPR, early access, early defibrillation, early advanced life support</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa8" id="8c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>		Early access, early CPR, early defibrillation, early advanced life support</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa8" id="8d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>		Early access, early CPR, early life support, early defibrillation</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q9. 	How will you control external bleeding ?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa9" id="9a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	Pressure,Elevation,Clean the wound,dressing</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa9" id="9b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Pressure,Elevate,Indirect pressure points to control bleeding</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa9" id="9c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Elevate, Cold Compress to slow blood flow</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa9" id="9d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Remove foreign material,Clean the wound,Dressing</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q10. Do you know what shock is in First aid?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa10" id="10a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Lack of oxygen reaching the body's cells</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa10" id="10b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>	A state of emotional distress</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa10" id="10c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Very low blood sugar levels</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="fa10" id="10d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Body temperature drops too low</p>
+	</div>
+</div>
+</div>
+
+<br><br>
+
+<table border=0 align=center>
+<tr>
+<td colspan=2 align=center><button class="button" onclick="calculate()">Okay let's check my first aid skills!</button></td>
+</tr>
+</table>
+
+</div>
+</section>
+</main>
+</body>
+</html>

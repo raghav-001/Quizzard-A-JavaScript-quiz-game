@@ -1,0 +1,504 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="quizzard_style.css">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+                <!-- Google Fonts -->
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+                <!-- Bootstrap core CSS -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+                <!-- Material Design Bootstrap -->
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+                <!-- JQuery -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <!-- Bootstrap tooltips -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+                <!-- Bootstrap core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                <!-- MDB core JavaScript -->
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+</head>
+<style>
+.bg{
+background-image: url("https://images.cdn2.stockunlimited.net/preview1300/set-of-entertainment-icons_1447100.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+* {
+  box-sizing: border-box;
+}
+.quiz
+{
+background: linear-gradient(to left,rgba(255,152,151,0.90),rgba(246,80,160,0.90));
+color:white;
+width: 80%;
+font-size: 17px;
+border-radius: 25px;
+padding:20px;
+}
+
+.quiz1
+{
+background: linear-gradient(to left,rgba(255,152,151,0.70),rgba(246,80,160,0.70));
+color:white;
+width: 80%;
+height:40%;
+font-size: 15px;
+border-radius: 25px;
+padding:20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 70%;
+    height: 1.1em;
+}
+
+h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#00FFED,#00B8BA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+</style>
+
+<script>
+var score=0;
+function calculate()
+{
+
+	if (document.getElementById("1b").checked) score+=1;
+	if (document.getElementById("2d").checked) score+=1;
+	if (document.getElementById("3b").checked) score+=1;
+	if (document.getElementById("4a").checked) score+=1;
+	if (document.getElementById("5d").checked) score+=1;
+	if (document.getElementById("6a").checked) score+=1;
+	if (document.getElementById("7c").checked) score+=1;
+	if (document.getElementById("8c").checked) score+=1;
+	if (document.getElementById("9b").checked) score+=1;
+	if (document.getElementById("10d").checked) score+=1;
+	if (score==10)document.getElementById("score").innerHTML="Damn! You sure watch a lot of TV! You scored full marks!"; 
+	if (score>=6 && score<=9) document.getElementById("score").innerHTML="Great! Your final score is "+score;
+	if (score>=0 && score<=5) document.getElementById("score").innerHTML="It's okay! Your final score is "+score;
+
+	document.getElementById("dull").style.visibility="visible";
+	document.getElementById("pop").style.visibility="visible";
+	
+}
+function close_pop()
+{
+	document.getElementById("pop").style.visibility="hidden";
+	document.getElementById("dull").style.visibility="hidden";
+}
+</script>
+
+
+<body>
+
+<main>
+<section class="py-5 bg">
+
+<div class="background_dull" id ="dull" style="visibility:hidden">
+</div>
+
+<div class="score_pop" id="pop" style="visibility:hidden">
+<p id="score"></p>
+<center>
+<button class="button" onclick="close_pop()">Close</button>
+<a href="entertainment_key.html"><button class="button">Click here to go to the answer key</button></a>
+</center>
+</div>
+
+
+<div class="container quiz1">
+<h2 class="h1-responsive font-weight-bold text-center mb-5" >Entertainment Time!!</h2>
+<h3 class="text-white text-center mx-auto mb-5">Think you're some sort of movie or music expert? Take this epic quiz and test your trivia!</h3>
+</div>
+<br>
+<br>
+<div class="container quiz">
+<p>Q1. Who directed Titanic, Avatar and The Terminator?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent1" id="1a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Quentin Tarantino</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent1" id="1b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>James Cameron</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent1" id="1c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>S. Shankar</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent1" id="1d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Christopher Nolan</p>
+	</div>
+</div>
+</div>
+<br>
+<div class="container quiz">
+<p>Q2. Easy one, On what TV show did One Direction first appear?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent2" id="2a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Britain's Got Talent</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent2" id="2b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Eastenders</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent2" id="2c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Top of the pops</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent2" id="2d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>X factor</p>
+	</div>
+</div>
+</div>
+
+
+<br>
+<div class="container quiz">
+<p>Q3. First Indian movie submitted for Oscar?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent3" id="3a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Slumdog millionaire</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent3" id="3b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Mother India</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent3" id="3c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Lagaan</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent3" id="3d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Devdas</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q4. In 1975 Bohemian Rhapsody was number one for nine weeks. It was finally knocked off the top slot by a song with a name that appears in the lyrics of Bohemian Rhapsody. Name the song and the band that ended Queen’s number one success.</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent4" id="4a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Mamma Mia by Abba</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent4" id="4b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p> Stairway To Heaven by Led Zeppelin</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent4" id="4c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Stayin' Alive by Bee Gees</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent4" id="4d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Born To Run by Bruce Springsteen</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q5. What is the highest-grossing box office film of all time?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent5" id="5a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Star Wars: The Force Awakens</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent5" id="5b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Avatar</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent5" id="5c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Duh! It's Titanic</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent5" id="5d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>It's obviously Avengers: Endgame</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q6.Which band sang The Final Countdown?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent6" id="6a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Europe</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent6" id="6b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The Queen</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent6" id="6c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>The Beatles</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent6" id="6d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Pink Floyd</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q7. The first 3D animated indian film is?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent7" id="7a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Bal Ganesh</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent7" id="7b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Kochadaiiyaan</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent7" id="7c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Roadside Romeo</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent7" id="7d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Chhota Bheem: The Rise of Kirmada</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q8. Who has won the most Grammy Awards?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent8" id="8a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Taylor Swift</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent8" id="8b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Adele</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent8" id="8c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Georg Solti</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent8" id="8d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Billie Eilish</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q9.Who is the only Disney princess who was inspired by an actual person?</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent9" id="9a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Moana</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent9" id="9b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Pocahontas</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent9" id="9c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Cinderella</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent9" id="9d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Brave</p>
+	</div>
+</div>
+</div>
+
+<br>
+<div class="container quiz">
+<p>Q10. Okay, for the kpop fans out there, this ones for you! The first kpop group to perform in Coachella</p>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent10" id="10a">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>BigBang</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent10" id="10b">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Exo</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent10" id="10c">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Duh! It's BTS</p>
+	</div>
+</div>
+<div class="row">
+	 <div class="col-lg-2 text-center text-lg-center">
+		<input type="radio" name ="ent10" id="10d">
+	</div>
+	 <div class="col-lg-10  text-lg-left">
+		<p>Blackpink</p>
+	</div>
+</div>
+</div>
+
+<br><br>
+
+<table border=0 align=center>
+<tr>
+<td colspan=2 align=center><button class="button" onclick="calculate()">Okay let's check my score!</button></td>
+</tr>
+</table>
+
+</div>
+</section>
+</main>
+</body>
+</html>
